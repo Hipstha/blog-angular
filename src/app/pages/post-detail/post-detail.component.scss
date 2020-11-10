@@ -1,0 +1,90 @@
+section {
+    background-color: #F2F2F2;
+    .post-header {
+        margin-top: 3rem;
+        background-image: url('https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+        height: 35rem;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: cover;
+        position: static;
+        padding: 2rem;
+        color: white;
+        .post-header-container {
+            .return-options {
+                a {
+                    color: white;
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 17px;
+                    font-weight: 700;
+                    span {
+                        font-size: 17px;
+                        font-weight: bold;
+                        margin-right: 5px;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .post-header-title {
+                height: 30rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h2 {
+                    font-weight: bold;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    .post-summary {
+        padding: 3rem 0rem;
+        font-weight: 500;
+        font-size: 2.1rem;
+        width: 100rem;
+        margin: auto;
+        .post-summary-container {
+            .summary {
+                p {}
+            }
+        }
+    }
+    .post-comments {
+        width: 50rem;
+        margin: auto;
+        .post-comments-title {
+            h3 {
+                font-weight: 700;
+            }
+        }
+        .comments-section {}
+        .comment-form {
+            form {
+                margin: 3rem 0rem;
+                margin-bottom: 2rem;
+                .form-col {
+                    textarea {
+                        width: 100%;
+                        border-left: 0;
+                        border-top: 0;
+                        border-right: 0;
+                        border-bottom: 1px solid #3F51B5;
+                        margin-bottom: 1rem;
+                        background-color: unset;
+                        font-size: 20px;
+                    }
+                    .submit-button {
+                        border: 0;
+                        background: #3F51B5;
+                        color: white;
+                        padding: 0.4rem 1.6rem;
+                        border-radius: 4px 4px;
+                    }
+                }
+            }
+        }
+    }
+}

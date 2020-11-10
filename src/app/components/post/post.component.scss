@@ -1,0 +1,111 @@
+a {
+    .post-container {
+        // background-image: url('https://images.unsplash.com/photo-1604653548566-c03dabd1edd6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+        // background-image: url('https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position-y: center;
+        // height: 360px;
+        color: white;
+        cursor: pointer;
+        .post-image {
+            margin-bottom: -23.8rem;
+            img {
+                background: black;
+                transition: 0.3s;
+                filter: brightness();
+                height: 380px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .post-body {
+            filter: brightness();
+            padding: 130px 20px 10px 30px;
+            .post-title {
+                h2 {
+                    font-weight: 700;
+                    font-size: 40px;
+                    margin-bottom: -9px;
+                }
+            }
+            .onHover-animation {
+                transition: 0.5s;
+                height: 10px;
+                width: 0rem;
+                background-color: white;
+                display: inline-block;
+            }
+            .post-comments {
+                margin-top: 10px;
+                p {
+                    font-style: oblique;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        margin: 0px 3px;
+                    }
+                }
+            }
+            .post-description {
+                width: 80%;
+                height: 5.8rem;
+                p {}
+            }
+            .post-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .post-category {
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-weight: 600;
+                    font-size: 12px;
+                    p {}
+                }
+                .post-option {
+                    display: flex;
+                    p {
+                        margin: 0px 10px;
+                        opacity: 0;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .post-image {
+                img {
+                    filter: brightness(0.6);
+                }
+            }
+            .post-body {
+                .post-title {
+                    h2 {}
+                }
+                .onHover-animation {
+                    width: 10rem;
+                }
+                .post-comments {
+                    p {}
+                }
+                .post-description {
+                    p {}
+                }
+                .post-footer {
+                    .post-category {
+                        p {}
+                    }
+                    .post-option {
+                        p {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}

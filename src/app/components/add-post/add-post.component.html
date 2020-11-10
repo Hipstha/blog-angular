@@ -1,0 +1,44 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-modal" data-toggle="modal" data-target="#exampleModal">
+    <span class="material-icons">
+        edit
+    </span>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create post</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Title" class="form-control">
+                    </div>
+                    <div class="form-row">
+                        <textarea name="summary" class="form-control" id="sumary-form" rows="1" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option value ="Travel">Travel</option>
+                            <option value ="Lifestyle">Lifestyle</option>
+                            <option value ="Business">Business</option>
+                            <option value ="Food">Food</option>
+                            <option value ="Work">Work</option>
+                          </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" class="form-control" placeholder="URL of the image" value="https://source.unsplash.com/random">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-canel" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-submit">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
