@@ -8,6 +8,7 @@
             ul {
                 margin: 0;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
                 padding: 0;
@@ -30,6 +31,22 @@
                 }
                 .active {
                     background-color: #E0E0E0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 720px) {
+    .category-selector {
+        .category-selector-container {
+            .category-selector-menu {
+                ul {
+                    .category-selector-option {
+                        width: 33%;
+                        padding: 0.5rem;
+                        font-size: 13px;
+                    }
                 }
             }
         }

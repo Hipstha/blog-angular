@@ -11,3 +11,11 @@
         }
     }
 }
+
+@media screen and (min-width: 0px) and (max-width: 895px) {
+    .posts-container {
+        .post {
+            width: 100%;
+        }
+    }
+}

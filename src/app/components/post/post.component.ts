@@ -16,17 +16,18 @@ export class PostComponent implements OnInit {
 
   public summaryShort: string;
   public databaseWithout: Post[];
+  public classDestroy: boolean
   constructor(private databaseService: DatabaseService, private router: Router) { }
 
   ngOnInit(): void {
-    this.summaryShort = this.dataItem.summary.substring(0, 200) + '...';
+    this.summaryShort = this.dataItem.summary.substring(0, 150) + '...';
   }
 
-  public redirect() {
+  public redirect(): void {
     this.router.navigate(['posts/1']);
   }
 
-  public updatePost(event, dataItem) {
+  public updatePost(event, dataItem): void {
     event.preventDefault();
     event.stopPropagation();
     (document.getElementById('titleInput') as HTMLInputElement).value = dataItem.title;
@@ -44,7 +45,7 @@ export class PostComponent implements OnInit {
     ($('#updateModal') as any).modal('show');
   }
 
-  public deletePost(event, id) {
+  public deletePost(event, id): void {
     event.preventDefault();
     event.stopPropagation();
     Swal.fire({

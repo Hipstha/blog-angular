@@ -1,4 +1,3 @@
-import { getLocaleFirstDayOfWeek } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -23,12 +22,10 @@ export class PostDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private databaseService: DatabaseService, private fb: FormBuilder) {
     this.route.params.subscribe(res => this.idObject = Number(res.id));
     this.thisDatabase = this.databaseService.database.filter(data => data.id === this.idObject)[0];
-    console.log(this.thisDatabase);
   }
 
   ngOnInit(): void {
   }
-
   public addComment(): void {
     if ( this.commentsForm.invalid ) {
       this.invalidForm = true;
@@ -36,9 +33,6 @@ export class PostDetailComponent implements OnInit {
     }
     this.invalidForm = false;
     this.commentsForm.value.user = 'Joe Doe';
-    console.log("COMENTARIO");
-    
-    console.log(this.thisDatabase);
     this.thisDatabase.comments.push(this.commentsForm.value);
     this.commentsForm.reset();
   }

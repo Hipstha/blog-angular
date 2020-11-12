@@ -76,10 +76,10 @@ export class DatabaseService {
       img: `https://images.unsplash.com/photo-1604882356682-8ec3d3037c82?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max`,
       category: 'Business',
       comments: [
-        // {
-        //   user: 'Joe Doew',
-        //   comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
-        // }
+        {
+          user: 'Joe Doew',
+          comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
+        }
       ]
     },
     {

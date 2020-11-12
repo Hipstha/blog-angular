@@ -2,7 +2,6 @@ section {
     background-color: #F2F2F2;
     .post-header {
         margin-top: 3rem;
-        // background-image: url('https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
         height: 35rem;
         background-repeat: no-repeat;
         background-position-y: center;
@@ -44,13 +43,6 @@ section {
         padding: 3rem 10rem;
         font-weight: 500;
         font-size: 2.1rem;
-        // width: 100rem;
-        // margin: auto;
-        .post-summary-container {
-            .summary {
-                p {}
-            }
-        }
     }
     .post-comments {
         width: 50rem;
@@ -89,6 +81,29 @@ section {
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 820px) {
+    section {
+        .post-header {
+            height: 20rem;
+            .post-header-container {
+                .post-header-title {
+                    height: 14rem;
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+        .post-summary {
+            font-size: 1.5rem;
+            padding: 3rem 1rem;
+        }
+        .post-comments {
+            width: 80%;
         }
     }
 }

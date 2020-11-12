@@ -25,7 +25,7 @@ export class CategorySelectorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  filterDBBy( value: string ) {
+  filterDBBy( value: string ): void {
     if(value !== 'All') {
       this.filteredDb = this.databaseService.database.filter(arr => arr.category === value);
     } else {

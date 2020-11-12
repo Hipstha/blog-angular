@@ -1,11 +1,5 @@
 a {
     .post-container {
-        // background-image: url('https://images.unsplash.com/photo-1604653548566-c03dabd1edd6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
-        // background-image: url('https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position-y: center;
-        // height: 360px;
         color: white;
         cursor: pointer;
         .post-image {
@@ -107,5 +101,85 @@ a {
     }
     &:hover {
         text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1270px) {
+    a {
+        .post-container {
+            .post-image {
+                img {}
+            }
+            .post-body {
+                padding: 83px 20px 10px 30px;
+                .post-title {
+                    h2 {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 895px) {
+    a {
+        .post-container {
+            .post-body {
+                padding: 83px 20px 10px 30px;
+                .post-title {
+                    h2 {
+                        width: 100%;
+                    }
+                }
+                .post-description {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+    a {
+        .post-container {
+            .post-body {
+                padding: 62px 20px 10px 30px;
+                .post-title {
+                    h2 {
+                        width: 100%;
+                    }
+                }
+                .post-comments {
+                    p {
+                        span {}
+                    }
+                }
+                .post-description {
+                    width: 100%;
+                    height: 7rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 350px) {
+    a {
+        .post-container {
+            .post-body {
+                padding: 14px 20px 10px 30px;
+                .post-title {
+                    h2 {
+                        width: 100%;
+                        font-size: 1rem;
+                    }
+                }
+                .post-description {
+                    width: 100%;
+                    height: 10rem;
+                }
+            }
+        }
     }
 }
