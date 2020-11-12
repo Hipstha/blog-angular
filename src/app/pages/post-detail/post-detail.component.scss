@@ -2,7 +2,7 @@ section {
     background-color: #F2F2F2;
     .post-header {
         margin-top: 3rem;
-        background-image: url('https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+        // background-image: url('https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
         height: 35rem;
         background-repeat: no-repeat;
         background-position-y: center;
@@ -41,11 +41,11 @@ section {
         }
     }
     .post-summary {
-        padding: 3rem 0rem;
+        padding: 3rem 10rem;
         font-weight: 500;
         font-size: 2.1rem;
-        width: 100rem;
-        margin: auto;
+        // width: 100rem;
+        // margin: auto;
         .post-summary-container {
             .summary {
                 p {}
@@ -63,9 +63,12 @@ section {
         .comments-section {}
         .comment-form {
             form {
-                margin: 3rem 0rem;
-                margin-bottom: 2rem;
+                padding-top: 2rem;
+                padding-bottom: 3rem;
                 .form-col {
+                    .invalid {
+                        border-bottom: 1px solid red;
+                    }
                     textarea {
                         width: 100%;
                         border-left: 0;
@@ -75,6 +78,7 @@ section {
                         margin-bottom: 1rem;
                         background-color: unset;
                         font-size: 20px;
+                        transition: 0.5s;
                     }
                     .submit-button {
                         border: 0;

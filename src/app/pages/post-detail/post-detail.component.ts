@@ -1,4 +1,9 @@
+import { getLocaleFirstDayOfWeek } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { Post } from 'src/app/interfaces/post';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -7,9 +12,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostDetailComponent implements OnInit {
 
-  constructor() { }
+  public idObject: number;
+  public thisDatabase: Post;
+  public invalidForm = false;
+  public commentsForm = this.fb.group({
+    user: [''],
+    comment: ['', Validators.required]
+  });
+
+  constructor(private route: ActivatedRoute, private databaseService: DatabaseService, private fb: FormBuilder) {
+    this.route.params.subscribe(res => this.idObject = Number(res.id));
+    this.thisDatabase = this.databaseService.database.filter(data => data.id === this.idObject)[0];
+    console.log(this.thisDatabase);
+  }
 
   ngOnInit(): void {
   }
 
+  public addComment(): void {
+    if ( this.commentsForm.invalid ) {
+      this.invalidForm = true;
+      return;
+    }
+    this.invalidForm = false;
+    this.commentsForm.value.user = 'Joe Doe';
+    console.log("COMENTARIO");
+    
+    console.log(this.thisDatabase);
+    this.thisDatabase.comments.push(this.commentsForm.value);
+    this.commentsForm.reset();
+  }
 }

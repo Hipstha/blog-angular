@@ -1,28 +1,28 @@
-<a routerLink="/posts/1">
+<a [routerLink]="['/posts', dataItem.id]">
     <article class="post-container">
         <div class="post-image">
-            <img src="https://images.unsplash.com/photo-1603398741629-22d0b9741543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="image">
+            <img [src]="dataItem.img" alt="image">
         </div>
         <div class="post-body">
             <div class="post-title">
-                <h2>The waves are high & beautiful</h2>
+                <h2>{{ dataItem.title }}</h2>
             </div>
             <div class="onHover-animation">
 
             </div>
             <div class="post-comments">
-                <p><span>3 </span> <span>Comments </span> <span class="material-icons">forum</span></p>
+                <p><span>{{ dataItem.comments.length }} </span> <span>Comments </span> <span class="material-icons">forum</span></p>
             </div>
             <div class="post-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus praesentium fuga distinctio nulla blanditiis ut? Perferendis illum consequuntur quaerat nulla aliquam, mollitia quam asperiores labore. Aliquam mollitia blanditiis optio nihil?</p>
+                <p>{{ summaryShort }}</p>
             </div>
             <div class="post-footer">
                 <div class="post-category">
-                    <p>Travel</p>
+                    <p>{{ dataItem.category }}</p>
                 </div>
                 <div class="post-option">
-                    <p><span class="material-icons">edit</span></p>
-                    <p><span class="material-icons">delete</span></p>
+                    <p class="pruebaClick"><span class="material-icons" (click)="updatePost($event, dataItem)">edit</span></p>
+                    <p><span class="material-icons" (click)="deletePost($event, dataItem.id)">delete</span></p>
                 </div>
             </div>
         </div>
